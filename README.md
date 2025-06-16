@@ -70,7 +70,7 @@ cd server
 npm install  # or pip install -r requirements.txt for Flask
 npm run dev  # or flask run
 
-📁 File Structure
+## 📁 File Structure
 bash
 Copy
 Edit
@@ -79,7 +79,8 @@ flight-price-chatbot/
 ├── server/              # Flask or Node backend
 ├── flights.json         # Static flight data
 ├── README.md
-🔮 Future Improvements
+
+## 🔮 Future Improvements
 ✅ Add real-time API integration (Skyscanner, Kiwi, etc.)
 
 🔐 Add user accounts and flight alerts
