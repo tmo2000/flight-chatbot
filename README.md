@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# ✈️ Flight Price Finder Chatbot
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This chatbot helps users search for **available flights** between cities using natural language. It's designed to simulate a real-time flight inquiry assistant by returning flight information based on a predefined dataset.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📦 Project Features
 
-### `npm start`
+- 💬 Chatbot interface for natural flight queries
+- 🔍 Supports limited routes listed in `flights.json`
+- ⏱ Shows departure and arrival times
+- 🛫 Displays flight status (On Time, Delayed, Boarding, etc.)
+- 🎯 Built with React (frontend) and Flask/Node (backend)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧪 Example User Queries
 
-### `npm test`
+- "What are the available flights from Dubai to Lagos?"
+- "Show me flights from Lagos to Kigali"
+- "Is there a delayed flight to New York?"
+- "What time is EK783 leaving Dubai?"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ✈️ Available Flights (Static)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The chatbot currently supports **only the following flights** from your `flights.json` file:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Flight No. | From               | To                        | Departs | Arrives | Status     |
+|------------|--------------------|----------------------------|---------|---------|------------|
+| EK215      | Dubai (DXB)        | London Heathrow (LHR)      | 22:00   | 02:30   | On Time    |
+| EK201      | Dubai (DXB)        | New York JFK (JFK)         | 08:30   | 14:15   | Delayed    |
+| EK149      | Dubai (DXB)        | Amsterdam Schiphol (AMS)   | 15:45   | 20:20   | On Time    |
+| EK761      | Dubai (DXB)        | Johannesburg (JNB)         | 04:15   | 10:00   | Cancelled  |
+| EK419      | Sydney (SYD)       | Dubai (DXB)                | 21:10   | 05:30   | On Time    |
+| EK99       | Dubai (DXB)        | Munich (MUC)               | 12:00   | 16:50   | Delayed    |
+| EK203      | Dubai (DXB)        | Los Angeles (LAX)          | 03:00   | 11:20   | Boarding   |
+| EK231      | Dubai (DXB)        | Washington Dulles (IAD)    | 09:45   | 17:05   | On Time    |
+| EK978      | Kuwait (KWI)       | Dubai (DXB)                | 13:25   | 15:00   | Landed     |
+| EK347      | Kuala Lumpur (KUL) | Dubai (DXB)                | 02:40   | 05:50   | On Time    |
+| EK729      | Dubai (DXB)        | Kigali (KGL)               | 02:10   | 06:45   | On Time    |
+| EK730      | Kigali (KGL)       | Dubai (DXB)                | 08:15   | 14:30   | Delayed    |
+| EK783      | Dubai (DXB)        | Lagos (LOS)                | 12:00   | 16:30   | On Time    |
+| EK784      | Lagos (LOS)        | Dubai (DXB)                | 18:05   | 05:20   | Boarding   |
+| EK785      | Kigali (KGL)       | Lagos (LOS)                | 10:30   | 13:00   | Cancelled  |
+| EK786      | Lagos (LOS)        | Kigali (KGL)               | 15:15   | 17:45   | On Time    |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠️ Installation (Local Setup)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+# Clone the repository
+git clone https://github.com/your-username/flight-price-chatbot.git
+cd flight-price-chatbot
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Frontend (React)
+bash
+Copy
+Edit
+cd client
+npm install
+npm run dev
+Backend (Python Flask or Node)
+bash
+Copy
+Edit
+cd server
+npm install  # or pip install -r requirements.txt for Flask
+npm run dev  # or flask run
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+📁 File Structure
+bash
+Copy
+Edit
+flight-price-chatbot/
+├── client/              # React frontend
+├── server/              # Flask or Node backend
+├── flights.json         # Static flight data
+├── README.md
+🔮 Future Improvements
+✅ Add real-time API integration (Skyscanner, Kiwi, etc.)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🔐 Add user accounts and flight alerts
 
-## Learn More
+📆 Add flexible date and pricing filters
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+📱 Add voice support for flight queries
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
